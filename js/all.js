@@ -2117,15 +2117,16 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
 (function($, window, undefined){
   var MainScripts = {
-    thing: false,
-    widget: {
-      one:   'A',
-      two:   'B',
-      three: 'C'
-    },
-
     initialize: function(){
-
+      var self = this;
+      this.expandLeft();
+    },
+    expandLeft: function() {
+      $('.btn').on('click', function() {
+        var clickedBtn = $(this);
+        clickedBtn.addClass('expanded');
+        clickedBtn.find('.ajax-spinner').addClass('shown');
+      });
     }
   };
 
@@ -2139,6 +2140,6 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 
   // Deferred loading (window.load)
     $(window).load(function() {
-  }); 
+  });
 
 })(jQuery, window, null);

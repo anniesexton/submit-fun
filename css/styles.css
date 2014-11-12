@@ -6692,8 +6692,100 @@ button.close {
     display: none !important;
   }
 }
-#home-thing {
-  color: red;
+.btn {
+  padding: 13px 20px;
+  height: 59px;
+  width: 132px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn:active {
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+}
+.btn:hover {
+  color: #fff;
+}
+
+.btn-pink {
+  background-color: #e4678d;
+}
+
+.submit-buttons {
+  margin-top: 100px;
+  text-align: left;
+}
+
+.ajax-spinner {
+  width: 0;
+  height: 0;
+}
+
+.expanded .ajax-spinner.shown {
+  display: inline-block;
+}
+.expanded.expand-up .ajax-spinner.shown, .expanded.expand-down .ajax-spinner.shown {
+  display: block;
+  margin: 0 auto;
+}
+
+.expanded.expand-left {
+  -webkit-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  -o-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  width: 175px;
+}
+.expanded.expand-left .ajax-spinner.shown {
+  -webkit-transition: width 0.15s linear;
+  -o-transition: width 0.15s linear;
+  transition: width 0.15s linear;
+  margin-right: 20px;
+  height: auto;
+  width: 23px;
+}
+.expanded.expand-right {
+  -webkit-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  -o-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  width: 175px;
+}
+.expanded.expand-right .ajax-spinner.shown {
+  -webkit-transition: width 0.15s linear;
+  -o-transition: width 0.15s linear;
+  transition: width 0.15s linear;
+  margin-left: 20px;
+  height: auto;
+  width: 23px;
+}
+.expanded.expand-up {
+  -webkit-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  -o-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  height: 90px;
+}
+.expanded.expand-up .ajax-spinner.shown {
+  -webkit-transition: height 0.15s linear;
+  -o-transition: height 0.15s linear;
+  transition: height 0.15s linear;
+  margin-bottom: 13px;
+  height: 23px;
+  width: auto;
+}
+.expanded.expand-down {
+  -webkit-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  -o-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+  height: 90px;
+}
+.expanded.expand-down .ajax-spinner.shown {
+  -webkit-transition: height 0.15s linear;
+  -o-transition: height 0.15s linear;
+  transition: height 0.15s linear;
+  margin-top: 13px;
+  height: 23px;
+  width: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

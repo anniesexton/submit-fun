@@ -1,3 +1,88 @@
-#home-thing {
-  color: red;
+.btn {
+  padding: 13px 20px;
+  height: 59px;
+  width: 132px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  &:focus,
+  &:active:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+.btn-pink {
+  background-color: #e4678d;
+}
+.submit-buttons {
+  margin-top: 100px;
+  text-align: left;
+}
+.ajax-spinner {
+  width: 0;
+  height: 0;
+}
+
+// Expanding Classes
+.expanded {
+  .ajax-spinner {
+    &.shown {
+      display: inline-block;
+    }
+  }
+  &.expand-up,
+  &.expand-down {
+    .ajax-spinner.shown {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.expanded {
+  &.expand-left {
+    @include transition(width 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
+    width: 175px;
+    .ajax-spinner.shown {
+      @include transition(width 0.15s linear);
+      margin-right: 20px;
+      height: auto;
+      width: 23px;
+    }
+  }
+  &.expand-right {
+    @include transition(width 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
+    width: 175px;
+    .ajax-spinner.shown {
+      @include transition(width 0.15s linear);
+      margin-left: 20px;
+      height: auto;
+      width: 23px;
+    }
+  }
+  &.expand-up {
+    @include transition(height 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
+    height: 90px;
+    .ajax-spinner.shown {
+      @include transition(height 0.15s linear);
+      margin-bottom: 13px;
+      height: 23px;
+      width: auto;
+    }
+  }
+  &.expand-down {
+    @include transition(height 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
+    height: 90px;
+    .ajax-spinner.shown {
+      @include transition(height 0.15s linear);
+      margin-top: 13px;
+      height: 23px;
+      width: auto;
+    }
+  }
 }

@@ -1,14 +1,15 @@
 (function($, window, undefined){
   var MainScripts = {
-    thing: false,
-    widget: {
-      one:   'A',
-      two:   'B',
-      three: 'C'
-    },
-
     initialize: function(){
-
+      var self = this;
+      this.expandLeft();
+    },
+    expandLeft: function() {
+      $('.btn').on('click', function() {
+        var clickedBtn = $(this);
+        clickedBtn.addClass('expanded');
+        clickedBtn.find('.ajax-spinner').addClass('shown');
+      });
     }
   };
 
@@ -22,6 +23,6 @@
 
   // Deferred loading (window.load)
     $(window).load(function() {
-  }); 
+  });
 
 })(jQuery, window, null);
