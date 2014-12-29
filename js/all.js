@@ -2119,12 +2119,20 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
   var MainScripts = {
     initialize: function(){
       var self = this;
-      this.expandLeft();
+      this.expand();
+      this.contract();
     },
-    expandLeft: function() {
-      $('.btn').on('click', function() {
+    expand: function() {
+      $('.expanding-buttons .btn').on('click', function() {
         var clickedBtn = $(this);
         clickedBtn.addClass('expanded');
+        clickedBtn.find('.ajax-spinner').addClass('shown');
+      });
+    },
+    contract: function() {
+      $('.contract .btn').on('click', function() {
+        var clickedBtn = $(this);
+        clickedBtn.addClass('contracted');
         clickedBtn.find('.ajax-spinner').addClass('shown');
       });
     }

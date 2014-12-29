@@ -6709,35 +6709,34 @@ button.close {
   color: #fff;
 }
 
-.btn-pink {
-  background-color: #e4678d;
-}
-
 .submit-buttons {
   margin-top: 100px;
-  text-align: left;
 }
 
-.ajax-spinner {
+.expanding-buttons {
+  text-align: left;
+}
+.expanding-buttons .btn {
+  background-color: #e4678d;
+}
+.expanding-buttons .ajax-spinner {
   width: 0;
   height: 0;
 }
-
-.expanded .ajax-spinner.shown {
+.expanding-buttons .expanded .ajax-spinner.shown {
   display: inline-block;
 }
-.expanded.expand-up .ajax-spinner.shown, .expanded.expand-down .ajax-spinner.shown {
+.expanding-buttons .expanded.expand-up .ajax-spinner.shown, .expanding-buttons .expanded.expand-down .ajax-spinner.shown {
   display: block;
   margin: 0 auto;
 }
-
-.expanded.expand-left {
-  -webkit-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  -o-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+.expanding-buttons .expanded.expand-left {
+  -webkit-transition: width 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  -o-transition: width 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  transition: width 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
   width: 175px;
 }
-.expanded.expand-left .ajax-spinner.shown {
+.expanding-buttons .expanded.expand-left .ajax-spinner.shown {
   -webkit-transition: width 0.15s linear;
   -o-transition: width 0.15s linear;
   transition: width 0.15s linear;
@@ -6745,13 +6744,13 @@ button.close {
   height: auto;
   width: 23px;
 }
-.expanded.expand-right {
-  -webkit-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  -o-transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  transition: width 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+.expanding-buttons .expanded.expand-right {
+  -webkit-transition: width 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  -o-transition: width 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  transition: width 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
   width: 175px;
 }
-.expanded.expand-right .ajax-spinner.shown {
+.expanding-buttons .expanded.expand-right .ajax-spinner.shown {
   -webkit-transition: width 0.15s linear;
   -o-transition: width 0.15s linear;
   transition: width 0.15s linear;
@@ -6759,13 +6758,13 @@ button.close {
   height: auto;
   width: 23px;
 }
-.expanded.expand-up {
-  -webkit-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  -o-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+.expanding-buttons .expanded.expand-up {
+  -webkit-transition: height 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  -o-transition: height 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  transition: height 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
   height: 90px;
 }
-.expanded.expand-up .ajax-spinner.shown {
+.expanding-buttons .expanded.expand-up .ajax-spinner.shown {
   -webkit-transition: height 0.15s linear;
   -o-transition: height 0.15s linear;
   transition: height 0.15s linear;
@@ -6773,19 +6772,23 @@ button.close {
   height: 23px;
   width: auto;
 }
-.expanded.expand-down {
-  -webkit-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  -o-transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
-  transition: height 0.15s cubic-bezier(0.71, -0.075, 0, 1.65);
+.expanding-buttons .expanded.expand-down {
+  -webkit-transition: height 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  -o-transition: height 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
+  transition: height 0.15s cubic-bezier(0.685, 1.36, 0.795, 1.525);
   height: 90px;
 }
-.expanded.expand-down .ajax-spinner.shown {
+.expanding-buttons .expanded.expand-down .ajax-spinner.shown {
   -webkit-transition: height 0.15s linear;
   -o-transition: height 0.15s linear;
   transition: height 0.15s linear;
   margin-top: 13px;
   height: 23px;
   width: auto;
+}
+
+.contracting-buttons .btn {
+  background-color: #44C6CB;
 }
 
 /*# sourceMappingURL=styles.css.map */

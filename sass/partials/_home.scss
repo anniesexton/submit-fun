@@ -16,73 +16,77 @@
     color: #fff;
   }
 }
-.btn-pink {
-  background-color: #e4678d;
-}
 .submit-buttons {
   margin-top: 100px;
+}
+// Expanding Buttons
+.expanding-buttons {
   text-align: left;
-}
-.ajax-spinner {
-  width: 0;
-  height: 0;
-}
-
-// Expanding Classes
-.expanded {
+  .btn {
+    background-color: #e4678d;
+  }
   .ajax-spinner {
-    &.shown {
-      display: inline-block;
-    }
+    width: 0;
+    height: 0;
   }
-  &.expand-up,
-  &.expand-down {
-    .ajax-spinner.shown {
-      display: block;
-      margin: 0 auto;
+
+  .expanded {
+    .ajax-spinner {
+      &.shown {
+        display: inline-block;
+      }
+    }
+    &.expand-up,
+    &.expand-down {
+      .ajax-spinner.shown {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &.expand-left {
+      @include transition(width 0.15s cubic-bezier(0.685, 1.360, 0.795, 1.525));
+      width: 175px;
+      .ajax-spinner.shown {
+        @include transition(width 0.15s linear);
+        margin-right: 20px;
+        height: auto;
+        width: 23px;
+      }
+    }
+    &.expand-right {
+      @include transition(width 0.15s cubic-bezier(0.685, 1.360, 0.795, 1.525));
+      width: 175px;
+      .ajax-spinner.shown {
+        @include transition(width 0.15s linear);
+        margin-left: 20px;
+        height: auto;
+        width: 23px;
+      }
+    }
+    &.expand-up {
+      @include transition(height 0.15s cubic-bezier(0.685, 1.360, 0.795, 1.525));
+      height: 90px;
+      .ajax-spinner.shown {
+        @include transition(height 0.15s linear);
+        margin-bottom: 13px;
+        height: 23px;
+        width: auto;
+      }
+    }
+    &.expand-down {
+      @include transition(height 0.15s cubic-bezier(0.685, 1.360, 0.795, 1.525));
+      height: 90px;
+      .ajax-spinner.shown {
+        @include transition(height 0.15s linear);
+        margin-top: 13px;
+        height: 23px;
+        width: auto;
+      }
     }
   }
 }
-
-.expanded {
-  &.expand-left {
-    @include transition(width 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
-    width: 175px;
-    .ajax-spinner.shown {
-      @include transition(width 0.15s linear);
-      margin-right: 20px;
-      height: auto;
-      width: 23px;
-    }
-  }
-  &.expand-right {
-    @include transition(width 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
-    width: 175px;
-    .ajax-spinner.shown {
-      @include transition(width 0.15s linear);
-      margin-left: 20px;
-      height: auto;
-      width: 23px;
-    }
-  }
-  &.expand-up {
-    @include transition(height 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
-    height: 90px;
-    .ajax-spinner.shown {
-      @include transition(height 0.15s linear);
-      margin-bottom: 13px;
-      height: 23px;
-      width: auto;
-    }
-  }
-  &.expand-down {
-    @include transition(height 0.15s cubic-bezier(0.710, -0.075, 0.000, 1.650));
-    height: 90px;
-    .ajax-spinner.shown {
-      @include transition(height 0.15s linear);
-      margin-top: 13px;
-      height: 23px;
-      width: auto;
-    }
+.contracting-buttons {
+  .btn {
+    background-color: #44C6CB;
   }
 }
